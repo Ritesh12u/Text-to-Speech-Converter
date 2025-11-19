@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text to Speech Converter</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="tts-glass-card">
+        <header>
+            <h1>🗣️ Text to Speech Converter</h1>
+            <p>Convert your text into lifelike speech! Powered by Web Speech API.</p>
+        </header>
+        <textarea id="text-input" placeholder="Type your message here..."></textarea>
+        <div class="tts-controls">
+            <div>
+                <label for="voice-select">Voice:</label>
+                <select id="voice-select"></select>
+            </div>
+            <div class="slider-group">
+                <label for="rate">Rate:</label>
+                <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1">
+                <span id="rate-value">1.0</span>
+            </div>
+            <div class="slider-group">
+                <label for="pitch">Pitch:</label>
+                <input type="range" id="pitch" min="0" max="2" step="0.1" value="1">
+                <span id="pitch-value">1.0</span>
+            </div>
+        </div>
+        <div class="tts-buttons">
+            <button id="speak-btn" class="primary">Speak</button>
+            <button id="pause-btn" class="secondary">Pause</button>
+            <button id="resume-btn" class="secondary">Resume</button>
+            <button id="stop-btn" class="danger">Stop</button>
+        </div>
+        <div id="tts-status"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
